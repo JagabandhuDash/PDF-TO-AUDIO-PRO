@@ -4,22 +4,22 @@ import Footer from "./components/Footer";
 import Tabbar from "./components/Tabbar";
 import PdfTOAudio from "./components/PdfTOAudio";
 import OcrExtract from "./components/OcrExtract";
-import TextToPdf from "./components/TextToPdf";
 import TextToAudio from "./components/TextToAudio";
 
 export default function App() {
   const [activeMode, setActiveMode] = useState("pdf"); 
 
   return (
-    <div className="min-h-screen bg-ink-950 font-body text-white flex flex-col transition-colors duration-500">
-      <Header />
+    <>
+    <div className="min-h-screen bg-ink-950 font-body text-white flex flex-col transition-colors duration-500 ">
+      <Header/>
 
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16 animate-fade-up">
         
        
         <div className="h-32 flex flex-col items-center justify-center mb-8 text-center">
           <p className="text-xs font-mono tracking-widest text-electric-400 uppercase mb-3">
-            Hello World
+           &lt; Hello World /&gt;
           </p>
           
           <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight">
@@ -41,15 +41,7 @@ export default function App() {
               </span>
             )}
 
-            {activeMode === "text-pdf" && (
-              <span className="animate-fade-in block">
-                Generate instant PDFs<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  from raw text
-                </span>
-              </span>
-            )}
-
+           
             {activeMode === "text-audio" && (
               <span className="animate-fade-in block">
                 Listen to any text<br />
@@ -75,5 +67,6 @@ export default function App() {
 
       <Footer />
     </div>
+    </>
   );
 }

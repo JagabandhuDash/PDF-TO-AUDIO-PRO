@@ -1,7 +1,7 @@
 export default function Tabbar({ activeMode, setActiveMode }) {
   return (
-    <div className="relative flex bg-ink-900 rounded-xl p-1 mb-8 border border-ink-800 shadow-inner w-full max-w-2xl mx-auto hidden sm:flex">
-      {/* Animated Sliding Background Pill - Now 1/4th width */}
+    <div className="relative flex bg-ink-900 rounded-xl p-1 mb-8 border border-ink-800 shadow-inner w-full max-w-2xl mx-auto  sm:flex">
+     
       <div 
         className={`absolute top-1 bottom-1 w-1/4 bg-ink-800 rounded-lg shadow-sm border border-ink-700 transition-transform duration-300 ease-in-out
           ${activeMode === "pdf" ? "translate-x-7" : 
